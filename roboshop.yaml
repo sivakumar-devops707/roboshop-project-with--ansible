@@ -2,8 +2,9 @@
   hosts: local
   connection: local
   vars:
-   ami_id: ""
-   envmt: "dev"
+   ami_id: ami-0220d79f3f480ecf5
+   envmt: dev
+   scg_id: sg-04a1d138ef8dc04ed
    instances:
    - mongodb
    - catalogue
