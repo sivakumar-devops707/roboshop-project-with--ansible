@@ -1,0 +1,29 @@
+- name: Creating instance and route 53 records
+  hosts: local
+  connection: local
+  vars:
+   ami_id: ""
+   envmt: "dev"
+   instances:
+   - mongodb
+   - catalogue
+
+  tasks:
+  - name: start an instance with a public IP address
+    amazon.aws.ec2_instance:
+     instance_type: t3.micro
+     security_group: default
+     image_id: "{{ ami_id }}"
+     name: "{{ item }}-{{ envmt }}"
+     tags:
+      project: Roboshop
+      component: "{{ item }}"
+      environment: "{{ envmt }}"
+      name: "{{ envmt }}-{{ envmt }}"
+    loop: "{{ instances }}"
+    register: ec2_output 
+
+
+  - name: print ec2_output
+    ansible.builtin.debug:
+     msg: "{{ ec2_output }}"  
