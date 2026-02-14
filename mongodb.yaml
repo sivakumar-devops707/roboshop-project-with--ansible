@@ -1,7 +1,7 @@
 - name: installing mongodb
-  hosts: monogdb
+  hosts: mongodb
   become: yes
-  
+
   tasks:
   - name: Install MongoDB
     ansible.builtin.copy:
