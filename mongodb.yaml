@@ -28,6 +28,6 @@
   - name: enable MongoDB
     ansible.builtin.service:
      name: mongod
-     enable: yes
+     enabled: yes
      state: restarted   
      
