@@ -33,7 +33,7 @@
   - name: delete catalogue zip file
     ansible.builtin.file:
       path: /tmp/catalogue.zip
-      state: absen
+      state: absent
 
   - name: delete catalogue zip file
     ansible.builtin.file:
