@@ -27,7 +27,7 @@
     
   - name: cerating directory exists
     ansible.builtin.file:
-        path: /opt/myapp/data   # Directory path to create
+        path: /app   # Directory path to create
         state: directory        # Ensure it's a directory
  
   - name: delete catalogue zip file
