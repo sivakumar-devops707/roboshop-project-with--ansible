@@ -34,12 +34,7 @@
     ansible.builtin.file:
       path: /tmp/catalogue.zip
       state: absent
-
-  - name: delete catalogue zip file
-    ansible.builtin.file:
-      path: /tmp/catalogue.zip
-      state: absent
-
+      
   - name: Download foo.conf
     ansible.builtin.get_url:
      url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
@@ -87,7 +82,7 @@
   - name: daemon reload
     ansible.builtin.systemd_service:
       daemon_reload: true
-      
+
   - name: start catalogue
     ansible.builtin.service:
       name: catalogue
