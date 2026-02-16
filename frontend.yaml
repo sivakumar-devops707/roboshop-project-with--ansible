@@ -32,7 +32,7 @@
         remote_src: yes
 
   - name: Copy nginx file to remote server
-    ansible.builtin.copy:
+    ansible.builtin.template:
         src: nginx.conf     # Path on your Ansible control node
         dest: /etc/nginx/nginx.conf       
   - name: start nginx
