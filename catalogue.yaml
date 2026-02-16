@@ -34,7 +34,7 @@
     ansible.builtin.file:
       path: /tmp/catalogue.zip
       state: absent
-      
+
   - name: Download foo.conf
     ansible.builtin.get_url:
      url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
@@ -59,7 +59,7 @@
   - name: Copy service file to remote server
     ansible.builtin.copy:
         src: mongodb.repo     # Path on your Ansible control node
-        dest: //etc/yum.repos.d/mongo.repo
+        dest: /etc/yum.repos.d/mongo.repo
 
 
   - name: install mongodb client

@@ -20,7 +20,7 @@
       path: /usr/share/nginx/html
       state: directory    
 
-  - name: Download foo.conf
+  - name: Download nginx.conf
     ansible.builtin.get_url:
      url: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
      dest: /tmp/frontend.zip
@@ -44,8 +44,8 @@
   - name: daemon reload
     ansible.builtin.systemd_service:
       daemon_reload: true
-      
-                
+
+
   - name: start nginx
     ansible.builtin.service:
       name: nginx
