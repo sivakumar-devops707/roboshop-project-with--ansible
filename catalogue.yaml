@@ -4,8 +4,8 @@
 
   tasks:
   - name: enable nodejs
-    ansible.builtin.command: dnf module disable nodejs -y
-    enabled: yes
+    ansible.builtin.command: dnf module enable nodejs -y
+    
 
   - name: installing nodejs
     ansible.builtin.dnf:
