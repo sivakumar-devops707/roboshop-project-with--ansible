@@ -1,5 +1,5 @@
 - name: nginx configure
-  home: frontend
+  hosts: frontend
   become: yes
 
   tasks:
