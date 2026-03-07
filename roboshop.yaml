@@ -10,6 +10,7 @@
    instances:
    - mongodb
    - catalogue
+   - user
 
   tasks:
   - name: start an instance with a public IP address
